@@ -1,9 +1,12 @@
 # takochan full-text search shard 002
 
-Reserved for publications added after the 277-work search-index migration
-baseline. This shard is intentionally not deployed or referenced by the main
-site until its first publication is assigned.
+This public Project Pages repository contains the generated Pagefind shard for
+publications assigned to search shard `002`. It does not contain PDFs, EPUBs,
+working masters, or hand-edited search data.
 
-When activated, `source.json` must be updated to the exact reviewed archive
-commit and the standard Pages workflow added. Existing publication slugs must
-not be moved between shards.
+`source.json` pins the exact public archive commit and shard ID. The Pages
+workflow checks out that commit, downloads checksum-verified PDF/EPUB inputs,
+builds only the assigned shard, verifies its page maps, and deploys `dist/search`.
+
+Existing publication slugs must not be moved between shards merely to rebalance
+catalogue order.
